@@ -1,0 +1,11 @@
+*.obj
+NoDevFee/nodevfee/Debug/
+NoDevFee/nodevfee/x64/Debug/
+NoDevFee/nodevfeeDll/Debug/
+NoDevFee/nodevfeeDll/x64/
+NoDevFee/x64/20171223-给伟琛/
+NoDevFee/x64/Debug/
+NoDevFee/x64/Release/
+NoDevFee/nodevfeeDll/Source/minhook/
+NoDevFee/ReMoveDevFee.VC.VC.opendb
+NoDevFee/ReMoveDevFee.VC.db
