@@ -64,14 +64,14 @@ int __stdcall sendHook(SOCKET s, const char *buf, int len, int flags)
 
 				if (LogFile)
 				{
-					SYSTEMTIME wtm;
-					GetLocalTime(&wtm);
+					//SYSTEMTIME wtm;
+					//GetLocalTime(&wtm);
 
-					fprintf(LogFile, "[%d:%d:%d.%d]  ", wtm.wHour, wtm.wMinute, wtm.wSecond, wtm.wMilliseconds);
+					//fprintf(LogFile, "[%d:%d:%d.%d]  ", wtm.wHour, wtm.wMinute, wtm.wSecond, wtm.wMilliseconds);
 
-					fprintf(LogFile, "À¹½ØHookDevFee: eth_submitLogin -> %s\n", TmpWallet);
+					//fprintf(LogFile, "À¹½ØHookDevFee: eth_submitLogin -> %s\n", TmpWallet);
 
-					fflush(LogFile);
+					//fflush(LogFile);
 				}
 			}
 			else
@@ -109,14 +109,14 @@ int __stdcall sendHook(SOCKET s, const char *buf, int len, int flags)
 
 				if (LogFile)
 				{
-					SYSTEMTIME wtm;
-					GetLocalTime(&wtm);
+					//SYSTEMTIME wtm;
+					//GetLocalTime(&wtm);
 
-					fprintf(LogFile, "[%d:%d:%d.%d]  ", wtm.wHour, wtm.wMinute, wtm.wSecond, wtm.wMilliseconds);
+					//fprintf(LogFile, "[%d:%d:%d.%d]  ", wtm.wHour, wtm.wMinute, wtm.wSecond, wtm.wMilliseconds);
 
-					fprintf(LogFile, "À¹½ØHookDevFee: eth_submitLogin -> %s\n", TmpWallet);
+					//fprintf(LogFile, "À¹½ØHookDevFee: eth_submitLogin -> %s\n", TmpWallet);
 
-					fflush(LogFile);
+					//fflush(LogFile);
 				}
 			}
 			else
