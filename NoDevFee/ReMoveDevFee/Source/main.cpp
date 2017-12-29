@@ -1,6 +1,8 @@
 #include <Windows.h>
 #include <stdio.h>
 
+FILE *LogFile = 0;
+
 static void Error(const char *format, int result)
 {
 	char error[1024] = {0};
@@ -34,6 +36,18 @@ static void InjectDll(HANDLE process, const wchar_t *dllName)
 					{
 						if (WaitForSingleObject(thread, INFINITE) == WAIT_OBJECT_0)
 						{
+							if (LogFile)
+							{
+								SYSTEMTIME wtm;
+								GetLocalTime(&wtm);
+
+								fprintf(LogFile, "[%d:%d:%d.%d]  ", wtm.wHour, wtm.wMinute, wtm.wSecond, wtm.wMilliseconds);
+
+								fprintf(LogFile, "WaitForSingleObject(thread, INFINITE) == WAIT_OBJECT_0\n");
+
+								fflush(LogFile);
+							}
+
 							unsigned long int exitCode = 0;
 
 							if (GetExitCodeThread(thread, &exitCode))
@@ -83,6 +97,16 @@ static void InjectDll(HANDLE process, const wchar_t *dllName)
 
 int wmain(int argc, wchar_t *argv[])
 {
+	LogFile = fopen("InjectDllLog.txt", "r");
+
+	if (LogFile)
+	{
+		fclose(LogFile);
+
+		LogFile = fopen("InjectDllLog.txt", "w");
+	}
+
+
 	if (argc > 1)
 	{
 		STARTUPINFO si = {0};
@@ -108,6 +132,19 @@ int wmain(int argc, wchar_t *argv[])
 			Error("CreateProcessW error #%X", GetLastError());
 		}
 	}
+
+	if (LogFile)
+	{
+		SYSTEMTIME wtm;
+		GetLocalTime(&wtm);
+
+		fprintf(LogFile, "[%d:%d:%d.%d]  ", wtm.wHour, wtm.wMinute, wtm.wSecond, wtm.wMilliseconds);
+
+		fprintf(LogFile, "InjectDll ×¢ÈëMain Exit\n");
+
+		fflush(LogFile);
+	}
+
 
 	return EXIT_SUCCESS;
 }

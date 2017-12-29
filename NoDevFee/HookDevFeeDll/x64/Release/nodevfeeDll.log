@@ -1,0 +1,13 @@
+﻿  main.cpp
+  buffer.c
+  hde32.c
+  hde64.c
+  hook.c
+  trampoline.c
+  正在生成代码
+  41 of 44 functions (93.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  nodevfeeDll.vcxproj -> E:\xiaoshiquan_work\git_projects\QuantTest\NoDevFee\x64\Release\HookDevFeeDll.dll
+  nodevfeeDll.vcxproj -> E:\xiaoshiquan_work\git_projects\QuantTest\NoDevFee\x64\Release\HookDevFeeDll.pdb (Full PDB)

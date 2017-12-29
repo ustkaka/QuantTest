@@ -1,0 +1,11 @@
+﻿  main.cpp
+  buffer.c
+  hde32.c
+  hde64.c
+  hook.c
+  trampoline.c
+  正在生成代码
+  All 44 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  HookDevFeeDll.vcxproj -> E:\xiaoshiquan_work\git_projects\QuantTest\NoDevFee\x64\Release\HookDevFeeDll.dll
+  HookDevFeeDll.vcxproj -> E:\xiaoshiquan_work\git_projects\QuantTest\NoDevFee\x64\Release\HookDevFeeDll.pdb (Full PDB)
